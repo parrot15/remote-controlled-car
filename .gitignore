@@ -1,0 +1,12 @@
+# VSCode
+.vscode/
+
+# Frontend build directories
+user-interface/react-ui/node_modules/
+user-interface/react-ui/build/
+
+# Python virtual environment and build directories
+user-interface/api/.pyvenv/
+user-interface/api/__pycache__/
+car-control/.pyvenv/
+car-control/__pycache__/
