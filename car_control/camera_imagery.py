@@ -10,6 +10,7 @@ class ThermalCamera:
     """
     Class for interfacing with the MLX90640 thermal camera.
     """
+
     PROCESSING_DELAY = 0.1
 
     def __init__(self):
@@ -33,7 +34,7 @@ class ThermalCamera:
 
     def stream(self, callback):
         """
-        Continuously captures frames from the thermal camera and calls the 
+        Continuously captures frames from the thermal camera and calls the
         callback function with each frame.
         :param callback: Function to be called with each captured frame.
         """
@@ -50,7 +51,7 @@ thermal_camera = ThermalCamera()
 
 def start_stream(callback):
     """
-    Starts a separate thread to stream camera imagery and call the provided 
+    Starts a separate thread to stream camera imagery and call the provided
     callback function with each frame.
     :param callback: Function to be called with each captured frame.
     """

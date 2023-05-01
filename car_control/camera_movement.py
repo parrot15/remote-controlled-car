@@ -9,6 +9,7 @@ class StepperMotor:
     """
     Class for controlling a stepper motor.
     """
+
     STEP_SEQUENCE = [
         [0, 0, 0, 1],
         [0, 0, 1, 1],
@@ -87,7 +88,7 @@ panning_motor = StepperMotor(6, 13, 19, 26)
 
 def pan_camera(direction):
     """
-    Pans the camera using the stepper motor in the specified direction 
+    Pans the camera using the stepper motor in the specified direction
     or stops panning.
     :param direction: Direction to pan or stop ('left', 'right', or 'stop')
     :raises ValueError: If the direction is not 'left', 'right', or 'stop'

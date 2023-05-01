@@ -1,4 +1,5 @@
 from gevent import monkey
+
 monkey.patch_all()
 
 from flask import Flask
@@ -17,7 +18,7 @@ server_socket = SocketIO(app, cors_allowed_origins="*", async_mode="gevent")
 def car_movement(direction):
     """
     Handles the "car-movement" event and moves the car in the specified direction.
-    :param direction: Direction to move the car ('forward', 'backward', 'left', 
+    :param direction: Direction to move the car ('forward', 'backward', 'left',
     'right', or 'stop')
     """
     print(f"Received direction: {direction}")
@@ -27,7 +28,7 @@ def car_movement(direction):
 @server_socket.on("camera-movement")
 def camera_movement(direction):
     """
-    Handles the "camera-movement" event and moves the camera in the 
+    Handles the "camera-movement" event and moves the camera in the
     specified direction.
     :param direction: Direction to move the camera ('left', 'right', or 'stop')
     """

@@ -14,14 +14,16 @@ server_socket = SocketIO(app, cors_allowed_origins="*", async_mode="gevent")
 raspberry_pi_socket = socketio.Client()
 raspberry_pi_socket.connect(config.get("Raspberry Pi", "url"))
 
+
 @server_socket.on("car-movement")
 def car_movement(direction):
     """
     Handles the "car-movement" event and forwards it to the Raspberry Pi.
-    :param direction: Direction to move the car ('forward', 'backward', 
+    :param direction: Direction to move the car ('forward', 'backward',
     'left', 'right', or 'stop')
     """
     raspberry_pi_socket.emit("car-movement", direction)
+
 
 @server_socket.on("camera-movement")
 def camera_movement(direction):
@@ -31,10 +33,11 @@ def camera_movement(direction):
     """
     raspberry_pi_socket.emit("camera-movement", direction)
 
+
 @raspberry_pi_socket.on("camera-imagery")
 def camera_imagery(frame):
     """
-    Handles the "camera-imagery" event from the Raspberry Pi, processes the 
+    Handles the "camera-imagery" event from the Raspberry Pi, processes the
     frame, and emits the processed frame data to the front-end.
     :param frame: The frame data received from the Raspberry Pi
     """

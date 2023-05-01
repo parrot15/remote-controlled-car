@@ -8,6 +8,7 @@ class DCMotor:
     """
     Class for controlling a DC motor.
     """
+
     def __init__(self, forward_pin, backward_pin, pwm_frequency=1000):
         """
         Initialize a DCMotor instance.
@@ -49,6 +50,7 @@ class MotorGroup:
     """
     Class for controlling a group of four DC motors.
     """
+
     def __init__(self):
         """
         Initialize a MotorGroup instance.
@@ -62,9 +64,9 @@ class MotorGroup:
     def move(self, direction):
         """
         Moves the group of motors in the specified direction.
-        :param direction: Direction to move ('forward', 'backward', 
+        :param direction: Direction to move ('forward', 'backward',
         'left', or 'right')
-        :raises ValueError: If the direction is not 'forward', 
+        :raises ValueError: If the direction is not 'forward',
         'backward', 'left', or 'right'
         """
         if direction == "forward":
@@ -102,9 +104,9 @@ motors = MotorGroup()
 def move_car(direction):
     """
     Moves the car in the specified direction or stops it.
-    :param direction: Direction to move or stop ('forward', 'backward', 
+    :param direction: Direction to move or stop ('forward', 'backward',
     'left', 'right', or 'stop')
-    :raises ValueError: If the direction is not 'forward', 'backward', 
+    :raises ValueError: If the direction is not 'forward', 'backward',
     'left', 'right', or 'stop'
     """
     if direction not in {"forward", "backward", "left", "right", "stop"}:
