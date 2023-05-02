@@ -8,12 +8,16 @@ This project demonstrates many hardware, embedded systems, and software-related 
 developed over the span of 3 weeks as part of my Microcomputer Systems (CSCE 462) course, and was 
 regarded as one of the best projects.
 
-<p float="left">
-  <img src="images/side-view.png" width="33%" />
-  <img src="images/front-view.png" width="33%" />
-  <img src="images/top-view.png" width="33%" />
-</p>
-<img src="images/user-interface.png" width="100%" />
+<table>
+  <tr>
+    <td><img src="images/side-view.png" width="33%" /></td>
+    <td><img src="images/front-view.png" width="33%" /></td>
+    <td><img src="images/top-view.png" width="33%" /></td>
+  </tr>
+  <tr>
+    <td colspan="3"><img src="images/user-interface.png" width="100%" /></td>
+  </tr>
+</table>
 
 ## Hardware
 
