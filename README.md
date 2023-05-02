@@ -49,14 +49,14 @@ applied to scale and smoothe each frame. Then, they are sent to the frontend to 
 
 The following skills were involved in creating this project:
 
-### Hardware
+#### Hardware
 
 - Interfacing with I2C devices (MLX90640 thermal camera)
 - Controlling stepper motors through digital signals
 - Using PWM to control DC motors
 - Shifting voltage logic levels between two devices using BJTs and resistors
 
-### Software
+#### Software
 
 - Sending/receiving appropriate signals from GPIO pins in order to move motors appropriately,
   and receive thermal imagery
